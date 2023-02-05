@@ -1,0 +1,13 @@
+<%- include("../partials/header") %>
+
+<h4>Edit <%= campground.name %></h4>
+<a href="/">Go back</a>
+
+<form action="/campgrounds/<%=campground._id %>?_method=PUT" method="POST">
+   <input type="text" name="campground[name]" value="<%= campground.name %>">
+   <input type="text" name="campground[description]" value="<%= campground.description %>">
+   <input type="text" name="campground[image]" value="<%= campground.image %>">
+   <button>Submit</button>
+</form>
+
+<%- include("../partials/footer") %>

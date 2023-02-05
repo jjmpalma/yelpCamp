@@ -1,0 +1,25 @@
+<%- include("../partials/header") %>
+
+<div class="container"></div>
+
+<h1>Camp list</h1>
+
+<div class="row">
+   <% campg.forEach(function(c){ %>
+   <div class="col-sm-6 col-lg-3">
+      <div class="card d-flex text-center">
+         <img class="img-fluid" src="<%= c.image%>" alt="">
+         <div class="card-body">
+            <h4><%= c.name %></h4>
+            <p><%= c.description %></p>
+            <a href="/campgrounds/<%= c._id %>" class="btn btn-primary">Info</a>
+         </div>
+      </div>
+   </div>
+   <% }); %>
+</div>
+</div>
+
+
+
+<% include("../partials/footer") %>
